@@ -16,6 +16,8 @@ Source0:	http://dl.sourceforge.net/sourceforge/ltilib/031124_ltilib-%{version}.t
 # Source0-md5:	dfa6616f3dc5dae04e84311764181b96
 Patch0:		%{name}-Makefile.patch
 URL:		http://ltilib.sourceforge.net/doc/homepage/index.shtml
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gcc-g77
 BuildRequires:	doxygen
 BuildRequires:	graphviz
