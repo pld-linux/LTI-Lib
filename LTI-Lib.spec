@@ -12,7 +12,7 @@ Version:	1.9.8
 Release:	1
 License:	LGPL
 Group:		Development/Libraries
-Source0:	http://cesnet.dl.sourceforge.net/sourceforge/ltilib/031124_ltilib-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/sourceforge/ltilib/031124_ltilib-%{version}.tar.bz2
 # Source0-md5:	dfa6616f3dc5dae04e84311764181b96
 Patch0:		%{name}-Makefile.patch
 URL:		http://ltilib.sourceforge.net/doc/homepage/index.shtml
