@@ -36,7 +36,7 @@ The LTI-Lib is an object oriented library with algorithms and data
 structures frequently used in image processing and computer vision.
 
 %description -l pl
-LTI-Lib jest zorientowan± obiektowo biliotek± zawieraj±c± najczê¶ciej
+LTI-Lib jest zorientowan± obiektowo bibliotek± zawieraj±c± najczê¶ciej
 u¿ywane algorytmy i struktury danych w procesach przetwarzania
 i analizy obrazów.
 
