@@ -1,0 +1,55 @@
+diff -urN ltilib/linux/Makefile.in ltilib-fixed/linux/Makefile.in
+--- ltilib/linux/Makefile.in	2003-11-24 10:14:41.000000000 +0100
++++ ltilib-fixed/linux/Makefile.in	2003-12-10 12:22:54.000000000 +0100
+@@ -384,32 +384,32 @@
+ 
+ install: @LIB_DEBUG@ @LIB_RELEASE@
+ 	@echo "Creating directories."
+-	@$(INSTALL) -d $(bindir)
+-	@$(INSTALL) -d $(libdir)
+-	@$(INSTALL) -d $(includedir)
++	@$(INSTALL) -d $(DESTDIR)$(bindir)
++	@$(INSTALL) -d $(DESTDIR)$(libdir)
++	@$(INSTALL) -d $(DESTDIR)$(includedir)
+ 	@echo "Updating links."
+-	@rm -f $(libdirlnk) $(includedirlnk)
+-	@ln -s $(libdir) $(libdirlnk)
+-	@ln -s $(includedir) $(includedirlnk)
+-	@echo "Installing LTI-Lib include files in $(includedir)."
+-	@cp $(HEADERALL) $(includedir)
+-	@chmod 644 $(includedir)/*
+-	@echo "Installing libraries in $(libdir)."
++	@rm -f $(DESTDIR)$(libdirlnk) $(DESTDIR)$(includedirlnk)
++	@ln -s $(DESTDIR)$(libdir) $(DESTDIR)$(libdirlnk)
++	@ln -s $(DESTDIR)$(includedir) $(DESTDIR)$(includedirlnk)
++	@echo "Installing LTI-Lib include files in $(DESTDIR)$(includedir)."
++	@cp $(HEADERALL) $(DESTDIR)$(includedir)
++	@chmod 644 $(DESTDIR)$(includedir)/*
++	@echo "Installing libraries in $(DESTDIR)$(libdir)."
+ 	@if test "x@LIB_DEBUG@" != "x" ; then \
+-	  find ../lib -name \*d.a -exec cp {} $(libdir) \; ;\
++	  find ../lib -name \*d.a -exec cp {} $(DESTDIR)$(libdir) \; ;\
+ 	fi
+ 	@if test "x@LIB_RELEASE" != "x" ; then \
+-	  find ../lib -name \*r.a -exec cp {} $(libdir) \; ;\
++	  find ../lib -name \*r.a -exec cp {} $(DESTDIR)$(libdir) \; ;\
+ 	fi
+-	@chmod 644 $(libdir)/*
+-	@echo "Installing configuration script in $(bindir)."
+-	@$(INSTALL) lti-config $(bindir)
++	@chmod 644 $(DESTDIR)$(libdir)/*
++	@echo "Installing configuration script in $(DESTDIR)$(bindir)."
++	@$(INSTALL) lti-config $(DESTDIR)$(bindir)
+ 
+ uninstall:
+-	rm -f $(libdirlnk) $(includedirlnk)
+-	rm -fr $(includedir)
+-	rm -fr $(libdir)
+-	rm -f $(bindir)/lti-config
++	rm -f $(DESTDIR)$(libdirlnk) $(DESTDIR)$(includedirlnk)
++	rm -fr $(DESTDIR)$(includedir)
++	rm -fr $(DESTDIR)$(libdir)
++	rm -f $(DESTDIR)$(bindir)/lti-config
+ 
+ showconf:
+ 	@echo "VPATH: $(VPATH)"
