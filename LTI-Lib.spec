@@ -149,9 +149,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc README doc/styleguide/en/*.pdf
 %attr(755,root,root) %{_bindir}/*
 %{_includedir}/ltilib
-%{_includedir}/ltilib-%{version}/*
+%{_includedir}/ltilib-%{version}
 %{_libdir}/ltilib
-%{_libdir}/ltilib-%{version}/*
+%{_libdir}/ltilib-%{version}
 
 %files doc
 %defattr(644,root,root,755)
