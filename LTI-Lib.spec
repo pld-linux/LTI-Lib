@@ -5,14 +5,14 @@
 %bcond_with	3dnow
 %bcond_without	gtk
 
-Summary:	LTI-Lib - computer vision library.
+Summary:	LTI-Lib - computer vision library
 Summary(pl):	LTI-Lib - biblioteka do komputerowego przetwarzania obrazów.
 Name:		LTI-Lib
 Version:	1.9.8
 Release:	1
 License:	LGPL
 Group:		Development/Libraries
-Source0:	http://dl.sourceforge.net/sourceforge/ltilib/031124_ltilib-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/ltilib/031124_ltilib-%{version}.tar.bz2
 # Source0-md5:	dfa6616f3dc5dae04e84311764181b96
 Patch0:		%{name}-Makefile.patch
 URL:		http://ltilib.sourceforge.net/doc/homepage/index.shtml
@@ -37,8 +37,8 @@ structures frequently used in image processing and computer vision.
 
 %description -l pl
 LTI-Lib jest zorientowan± obiektowo bibliotek± zawieraj±c± najczê¶ciej
-u¿ywane algorytmy i struktury danych w procesach przetwarzania
-i analizy obrazów.
+u¿ywane algorytmy i struktury danych w procesach przetwarzania i
+analizy obrazów.
 
 %package doc
 Summary:	LTI-Lib - documentation
@@ -123,11 +123,11 @@ cd ../../../linux
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{_docdir}/%{name}-doc
+install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-doc
 
-cp doc/html/*.html	$RPM_BUILD_ROOT/%{_docdir}/%{name}-doc
-cp doc/html/*.png	$RPM_BUILD_ROOT/%{_docdir}/%{name}-doc
-cp doc/html/*.gif	$RPM_BUILD_ROOT/%{_docdir}/%{name}-doc
+cp doc/html/*.html	$RPM_BUILD_ROOT%{_docdir}/%{name}-doc
+cp doc/html/*.png	$RPM_BUILD_ROOT%{_docdir}/%{name}-doc
+cp doc/html/*.gif	$RPM_BUILD_ROOT%{_docdir}/%{name}-doc
 
 cd linux
 %{__make} install \
