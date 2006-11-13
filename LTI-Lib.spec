@@ -112,7 +112,7 @@ cd ../../../linux
 %endif
 
 %configure \
-%if %{without gtk}
+%if !%{with gtk}
 	--without-gtk \
 %endif
 	--disable-debug
