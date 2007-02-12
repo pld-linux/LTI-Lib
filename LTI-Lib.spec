@@ -6,7 +6,7 @@
 %bcond_without	gtk
 
 Summary:	LTI-Lib - computer vision library
-Summary(pl.UTF-8):   LTI-Lib - biblioteka do komputerowego przetwarzania obrazów.
+Summary(pl.UTF-8):	LTI-Lib - biblioteka do komputerowego przetwarzania obrazów.
 Name:		LTI-Lib
 Version:	1.9.8
 Release:	1
@@ -42,7 +42,7 @@ analizy obrazów.
 
 %package doc
 Summary:	LTI-Lib - documentation
-Summary(pl.UTF-8):   LTI-Lib - dokumentacja
+Summary(pl.UTF-8):	LTI-Lib - dokumentacja
 Group:		Development/Libraries
 
 %description doc
