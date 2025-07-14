@@ -53,7 +53,7 @@ Dokumentacja biblioteki LTI-Lib.
 
 %prep
 %setup -q -n ltilib
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 cd doc/styleguide/en
